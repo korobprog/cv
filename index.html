@@ -1,391 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Коробков Максим CV</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f9;
-        color: #333;
-        line-height: 1.6;
-        margin-bottom: 80px;
-      }
 
-      header {
-        background: url('https://www.hksols.com/wp-content/uploads/2016/06/HK-Solutions.jpg')
-          no-repeat center/cover;
-        color: rgb(255, 255, 255);
-        padding: 20px 0;
-        text-align: center;
-        position: relative;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Коробков Максим CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 80px;
+    }
+
+    header {
+      background: url('https://www.hksols.com/wp-content/uploads/2016/06/HK-Solutions.jpg') no-repeat center/cover;
+      color: rgb(255, 255, 255);
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header h2 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    header p {
+      margin: 5px 0;
+      font-size: 1.2em;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      border-bottom: 2px solid #6c63ff;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      color: #6c63ff;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills span {
+      background: #6c63ff;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      display: none;
+      /* Hidden by default */
+    }
+
+    .flex-container {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex-container>div {
+      border-radius: 5px;
+      padding: 8px;
+    }
+
+    .button {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      transition: all 0.6s ease;
+      /* Плавный переход */
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .button:hover {
+      background-color: rgba(108, 99, 255, 0.1);
+      /* Полупрозрачный фон */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* Тень */
+      transform: scale(1.1);
+      /* Увеличение кнопки */
+    }
+
+    .button svg {
+      transition: transform 0.3s ease, fill 0.3s ease;
+      /* Переход для SVG */
+    }
+
+    .button:hover svg {
+      transform: scale(1.2);
+      /* Увеличение иконки */
+      fill: #6c63ff;
+      /* Смена цвета иконки */
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 10px;
       }
 
       header h1 {
-        margin: 0;
-        font-size: 2.5em;
-      }
-
-      header h2 {
-        margin: 0;
-        font-size: 1.5em;
+        font-size: 2em;
       }
 
       header p {
-        margin: 5px 0;
-        font-size: 1.2em;
+        font-size: 1em;
       }
+    }
+  </style>
+</head>
 
-      .container {
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 20px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      section {
-        margin-bottom: 20px;
-      }
-
-      section h2 {
-        border-bottom: 2px solid #6c63ff;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-        color: #6c63ff;
-      }
-
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-      }
-
-      .skills span {
-        background: #6c63ff;
-        color: white;
-        padding: 5px 10px;
-        border-radius: 5px;
-      }
-
-      footer {
-        text-align: center;
-        padding: 10px 0;
-        background: #333;
-        color: white;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-      }
-
-      .flex-container {
-        display: flex;
-
-        justify-content: center;
-        align-items: center;
-      }
-
-      .flex-container > div {
-        border-radius: 5px;
-        padding: 8px;
-      }
-
-      .button {
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
-        padding: 10px;
-        border-radius: 50%;
-        transition: all 0.3s ease; /* Плавный переход */
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .button:hover {
-        background-color: rgba(108, 99, 255, 0.1); /* Полупрозрачный фон */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень */
-        transform: scale(1.1); /* Увеличение кнопки */
-      }
-
-      .button svg {
-        transition: transform 0.3s ease, fill 0.3s ease; /* Переход для SVG */
-      }
-
-      .button:hover svg {
-        transform: scale(1.2); /* Увеличение иконки */
-        fill: #6c63ff; /* Смена цвета иконки */
-      }
-
-      @media (max-width: 600px) {
-        .container {
-          padding: 10px;
-        }
-
-        header h1 {
-          font-size: 2em;
-        }
-
-        header p {
-          font-size: 1em;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <img src="./764228226.jpeg" style="height: 300px; width: auto" />
-      <h1>Коробков Максим Викторович</h1>
-      <h2>Frontend Developer</h2>
-      <div class="flex-container">
-        <p>eMail:</p>
-        <div class="code-container" onclick="selectCode(this)">
-          korobprog@gmail.com
-        </div>
+<body>
+  <header>
+    <img src="./764228226.jpeg" style="height: 300px; width: auto" />
+    <h1>Коробков Максим Викторович</h1>
+    <h2>Frontend Developer</h2>
+    <div class="flex-container">
+      <p>eMail:</p>
+      <div class="code-container" onclick="selectCode(this)">
+        korobprog@gmail.com
       </div>
-      <div class="flex-container">
-        <p>Тел:</p>
-        <div class="code-container" onclick="selectCode(this)">
-          +7 962 679 63 81
-        </div>
+    </div>
+    <div class="flex-container">
+      <p>Тел:</p>
+      <div class="code-container" onclick="selectCode(this)">
+        +7 962 679 63 81
       </div>
-      <button
-        rel="stylesheet"
-        class="button"
-        onclick="window.location.href='https://t.me/korobprog';"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 496 512"
-          id="IconChangeColor"
-          height="56"
-          width="56"
-        >
-          <path
-            d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"
-            id="mainIconPathAttribute"
-            filter="url(#shadow)"
-            fill="#ffffff"
-          ></path>
-        </svg>
-      </button>
-    </header>
+    </div>
+    <button rel="stylesheet" class="button" onclick="window.location.href='https://t.me/korobprog';">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" id="IconChangeColor" height="56" width="56">
+        <path
+          d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z"
+          id="mainIconPathAttribute" filter="url(#shadow)" fill="#ffffff"></path>
+      </svg>
+    </button>
+  </header>
 
-    <div class="container">
-      <section>
-        <h2>О себе</h2>
-        <p>
-          Я — целеустремлённый и инициативный фронтенд-разработчик с более чем
-          3-летним опытом работы в экосистеме React. Обладаю сильным стремлением
-          к обучению и адаптивностью, что позволяет мне быстро осваивать новые
-          технологии. Сильные стороны — работа в команде и эффективное
-          взаимодействие с коллегами, что способствует созданию продуктивной
-          рабочей атмосферы. Считаю, что успех проекта зависит не
-          только от технических навыков, но и от способности работать в команде
-          и поддерживать открытое общение.
-        </p>
-      </section>
-      <section>
-        <h2>Личные качества</h2>
-        <p>
-          Постоянное изучение и интеграция новых технологий позволяют
-          максимально использовать возможности стека и создавать быстрые,
-          удобные приложения. Есть опыт оценки сроков больших фитч и их успешной
-          реализации, ответственно подхожу даже к мелким заданиям. Вдумчиво и
-          качественно выполняю свою работу, доводя каждую задачу до успешного
-          завершения.
-        </p>
-      </section>
-      <section>
-        <h2>Опыт работы</h2>
-        <ul>
-          <li>
-            <strong>Frontend Developer</strong> — Компания Bhaktivedanta Book Trust International, Inc. (2023 - настоящее время)
-            <p>
-              <i
-                >Технологии: es6+, React, Typescript, Antd, Astro, Postman, Docker, Gitlab (+CI/CD), Figma, Firebase (Auth, Data)
-              </i>
-            </p>
-            <p>
-              Разработка внутренней CRM системы компании по управлению складами и продажами книг
-            </p>
-          </li>
-          <li>
-            <strong>Frontend Developer</strong> — Компания ООО "Город Легенд"
-            (Авгус 2022 - ноябрь 2023)
+  <div class="container">
+    <section>
+      <h2>О себе</h2>
+      <p>
+        Я — целеустремлённый и инициативный фронтенд-разработчик с более чем
+        3-летним опытом работы в экосистеме React. Обладаю сильным стремлением
+        к обучению и адаптивностью, что позволяет мне быстро осваивать новые
+        технологии. Сильные стороны — работа в команде и эффективное
+        взаимодействие с коллегами, что способствует созданию продуктивной
+        рабочей атмосферы. Считаю, что успех проекта зависит не
+        только от технических навыков, но и от способности работать в команде
+        и поддерживать открытое общение.
+      </p>
+    </section>
+    <section>
+      <h2>Личные качества</h2>
+      <p>
+        Постоянное изучение и интеграция новых технологий позволяют
+        максимально использовать возможности стека и создавать быстрые,
+        удобные приложения. Есть опыт оценки сроков больших фитч и их успешной
+        реализации, ответственно подхожу даже к мелким заданиям. Вдумчиво и
+        качественно выполняю свою работу, доводя каждую задачу до успешного
+        завершения.
+      </p>
+    </section>
+    <section>
+      <h2>Опыт работы</h2>
+      <ul>
+        <li>
+          <strong>Frontend Developer</strong> — Компания Bhaktivedanta Book Trust International, Inc. (2023 - настоящее
+          время)
+          <p>
+            <i>Технологии: es6+, React, Typescript, Antd, Astro, Postman, Docker, Gitlab (+CI/CD), Figma, Firebase
+              (Auth, Data)
+            </i>
+          </p>
+          <p>
+            Разработка внутренней CRM системы компании по управлению складами и продажами книг
+          </p>
+        </li>
+        <li>
+          <strong>Frontend Developer</strong> — Компания ООО "Город Легенд"
+          (Авгус 2022 - ноябрь 2023)
 
-            <p>
-              <i
-                >Технологии: es6+, React, Redux, Typescript, Material-ui,
-                Formik, Chart-js, Storybook, Gitlab (+CI/CD), Figma, Postman.
-              </i>
-            </p>
-            <p>Разработка сервиса программ лояльности, с настройками скидок/бонусов, партнеров, турниров за призы, дашбордами статистики и прочим. </p>
+          <p>
+            <i>Технологии: es6+, React, Redux, Typescript, Material-ui,
+              Formik, Chart-js, Storybook, Gitlab (+CI/CD), Figma, Postman.
+            </i>
+          </p>
+          <p>Разработка сервиса программ лояльности, с настройками скидок/бонусов, партнеров, турниров за призы,
+            дашбордами статистики и прочим. </p>
 
-              <p>Интересные задачи:</p>
+          <p>Интересные задачи:</p>
+          <ul>
+            <li>Создание турниров за призы </li>
+            <li>Разработка компонентной системы </li>
+            <li>Дашборды с множеством графиков и таблиц</li>
+            <li>Настройки программ лояльности</li>
+            <li>Редактирование профиля пользователя</li>
+          </ul>
+          </p>
+          <p>
+          <p>Детали проекта:</p>
+          <ul>
+            <li>Реализованные фичи:
               <ul>
-                <li>Создание турниров за призы </li>
-                <li>Разработка компонентной системы </li>
-                <li>Дашборды с множеством графиков и таблиц</li>
+                <li>Создание опросов и турниров</li>
+                <li>Компоненты в отдельном репозитории StoryBook</li>
+                <li>Дашборды:
+                  <ul>
+                    <li>Графики</li>
+                    <li>Таблицы</li>
+                    <li>Многоуровневая структура</li>
+                  </ul>
+                </li>
                 <li>Настройки программ лояльности</li>
                 <li>Редактирование профиля пользователя</li>
-              </ul>            
-            </p>
-          </li>
-        
-          <li>
-            <strong>Frontend Developer (частичная занятость)</strong> — Компания
-            Livboo Corporation (Октябрь 2022 — июль 2023)
-
-            <p>
-              <i>Технологии: React (hooks), Redux-toolkit, Typescript, React-Bootstrap, BitBucket, Docker</i>
-            </p>
-            <p>
-              Разработка системы учета и контроля тепловой энергии Интересные
-              задачи: разработка редактора интерактивных схем на
-              react-flow-renderer
-            </p>
-          </li>
-          <li>
-            <strong>Обучение React</strong> — Frontend Developer (Май 2020 - декабрь 2021)
-            <p>
-              Социальная сеть: <a  target="_blank" href="https://github.com/korobprog/Social_React" > https://github.com/korobprog/Social_React </a>
-            </p>
-            <p>
-              <ul>
-               <li>React JS (hooks), JavaScript, redux, TypeScript</li>
-               <li>js es6+, HTML, css, scss</li>
-               <li>react-hook-form, formik</li> 
-               <li>git, ESLint.</li>   
-               <li>REST API</li>  
               </ul>
-            </p>
-            
-          </li>
+            </li>
+            <li>Продолжительность проекта — 7 месяцев</li>
+            <li>Команда:
+              <ul>
+                <li>5 фронтенд-разработчиков</li>
+                <li>5 бэкенд-разработчиков</li>
+                <li>4 QA-инженера</li>
+              </ul>
+            </li>
+            <li>Методология разработки — Канбан</li>
+            <li>Интересные технологии:
+              <ul>
+                <li>Контрактное программирование:
+                  <ul>
+                    <li>Бэкенд на Node.js</li>
+                    <li>Отдельный репозиторий с контрактами, используемыми на фронтенде и бэкенде</li>
+                  </ul>
+                </li>
+                <li>TypeScript, React, Redux, Material UI, Chart.js, Formik, Yup</li>
+              </ul>
+            </li>
+            <li>Интересные задачи:
+              <ul>
+                <li>Турниры — сложная логика, пользователи могли соревноваться за бонусы и скидки</li>
+              </ul>
+            </li>
+          </ul>
+          </p>
 
-          <li>
-            <strong>Фриланс</strong> — Индивидуальное предпринимательство / частная практика / фриланс (2018 - 2021)
-            <p>
-              <i
-                >Технологии: Wordpress, Oclass, Joomla
-              </i>
-            </p>
-            <p>
-              Разрабатывал интернет магазины, блоги. Оптимизация, разработка быстрых лейдингов, работа с плагинами, увелечение функционала. Стек технологий Woocomerce, Elementor, CSS. Изучал JavaScript, HTML
-            </p>
-          </li>
-        </ul>
-      </section>
+        </li>
 
-      <section>
-        <h2>Образование</h2>
-        <ul>
-          <li>
-            <strong>Трейдер-программист</strong> — 
-            FXclab inc. (2003 - 2006)
-          </li>
-        </ul>
-      </section>
+        <li>
+          <strong>Frontend Developer (частичная занятость)</strong> — Компания
+          Livboo Corporation (Октябрь 2022 — июль 2023)
 
+          <p>
+            <i>Технологии: React (hooks), Redux-toolkit, Typescript, React-Bootstrap, BitBucket, Docker</i>
+          </p>
+          <p>
+            Разработка системы учета и контроля тепловой энергии Интересные
+            задачи: разработка редактора интерактивных схем на
+            react-flow-renderer
+          </p>
+          <p>
+          <p>Детали проекта:</p>
+          <ul>
+            <li>Реализованные фичи:
+              <ul>
+                <li>Редактор схем</li>
+                <li>Формы:
+                  <ul>
+                    <li>Форма логина</li>
+                    <li>Форма регистрации</li>
+                    <li>Валидация данных</li>
+                  </ul>
+                </li>
+                <li>Вёрстка писем для отправки с бэкенда</li>
+                <li>Бизнес-логика разделения ролей в системе</li>
+                <li>Виджет погоды:
+                  <ul>
+                    <li>Текущая погода</li>
+                    <li>Архив данных</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Продолжительность проекта — 7 месяцев (Август 2020 — Апрель 2021)</li>
+            <li>Команда:
+              <ul>
+                <li>3 фронтенд-разработчика</li>
+                <li>4 бэкенд-разработчика</li>
+                <li>1 QA-инженер</li>
+              </ul>
+            </li>
+            <li>Методология разработки — Канбан</li>
+            <li>Интересные технологии:
+              <ul>
+                <li>React, Redux-toolkit, TypeScript, React-Bootstrap</li>
+                <li>BitBucket</li>
+                <li>Docker</li>
+                <li>React-flow-renderer</li>
+                <li>Работа с приборами учёта:
+                  <ul>
+                    <li>Получение данных</li>
+                    <li>Отображение данных</li>
+                    <li>Формирование отчётов в PDF и Excel</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Интересные задачи:
+              <ul>
+                <li>Создание редактора теплосхем:
+                  <ul>
+                    <li>Простой интерфейс, не как в AutoCAD</li>
+                    <li>Сборка схем из блоков</li>
+                    <li>Drag-and-drop для добавления элементов и их соединения</li>
+                    <li>Анимация потока теплоносителя</li>
+                    <li>Реальное время: текущие показатели температуры, давления и других параметров</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          </p>
+        </li>
+        <li>
+          <strong>Обучение React</strong> — Frontend Developer (Май 2020 - декабрь 2021)
+          <p>
+            Социальная сеть: <a target="_blank" href="https://github.com/korobprog/Social_React">
+              https://github.com/korobprog/Social_React </a>
+          </p>
+          <p>
+          <ul>
+            <li>React JS (hooks), JavaScript, redux, TypeScript</li>
+            <li>js es6+, HTML, css, scss</li>
+            <li>react-hook-form, formik</li>
+            <li>git, ESLint.</li>
+            <li>REST API</li>
+          </ul>
+          </p>
 
+        </li>
 
-      <section>
-        <h2>Увлечение</h2>
-        <ul>
-          <li>чтение книг по психологии</li>
-          <li>изучение санскрита</li>
-          <li>
-            фильмы тематики развития
-          </li>
-          <li>
-            компьютерное железо
-          </li>
-          <li>
-            работа с деревом
-          </li>
-          <li>
-            плавание 
-          </li>
-          <li>
-            йога физ нагрузки
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Skills</h2>
-        <div class="skills">
-          <span>TypeScript</span>
-          <span>React</span>
-          <span>CSS</span>
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>Redux</span>
-          <span>Frontend</span>
-          <span>Node.js</span>
-          <span>Webpack</span>
-          <span>React.js</span>
-          <span>REST API</span>
-          <span>Sass</span>
-          <span>ReactJS</span>
-          <span>Docker</span>
-          <span>JS</span>
-          <span>API</span>
-          <span>SCSS</span>
-          <span>SPA</span>
-          <span>Express.js</span>
-          <span>Jest</span>
-          <span>NestJS</span>
-        </div>
-      </section>
-    </div>
+        <li>
+          <strong>Фриланс</strong> — Индивидуальное предпринимательство / частная практика / фриланс (2018 - 2021)
+          <p>
+            <i>Технологии: Wordpress, Oclass, Joomla
+            </i>
+          </p>
+          <p>
+            Разрабатывал интернет магазины, блоги. Оптимизация, разработка быстрых лейдингов, работа с плагинами,
+            увелечение функционала. Стек технологий Woocomerce, Elementor, CSS. Изучал JavaScript, HTML
+          </p>
+        </li>
+      </ul>
+    </section>
 
-    <footer>
-    
-      <div class="flex-container">
-  <p>&copy; 2025 Коробков М.В. Все права защищены.</p>
+    <section>
+      <h2>Образование</h2>
+      <ul>
+        <li>
+          <strong>Трейдер-программист</strong> —
+          FXclab inc. (2003 - 2006)
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Увлечение</h2>
+      <ul>
+        <li>чтение книг по психологии</li>
+        <li>изучение санскрита</li>
+        <li>
+          фильмы тематики развития
+        </li>
+        <li>
+          компьютерное железо
+        </li>
+        <li>
+          работа с деревом
+        </li>
+        <li>
+          плавание
+        </li>
+        <li>
+          йога физ нагрузки
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>TypeScript</span>
+        <span>React</span>
+        <span>CSS</span>
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>Redux</span>
+        <span>Frontend</span>
+        <span>Node.js</span>
+        <span>Webpack</span>
+        <span>React.js</span>
+        <span>REST API</span>
+        <span>Sass</span>
+        <span>ReactJS</span>
+        <span>Docker</span>
+        <span>JS</span>
+        <span>API</span>
+        <span>SCSS</span>
+        <span>SPA</span>
+        <span>Express.js</span>
+        <span>Jest</span>
+        <span>NestJS</span>
+      </div>
+    </section>
+  </div>
+
+  <footer id="footer">
+
+    <div class="flex-container">
+      <p>&copy; 2025 Коробков М.В. Все права защищены.</p>
       <?xml version="1.0" encoding="UTF-8" standalone="no"?>
       <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 
-            <button
-      rel="stylesheet"
-      class="button"
-      onclick="window.location.href='https://github.com/korobprog/karavan-book-tracker';"
-    >
-      <svg width="50px" height="50px" viewBox="0 -0.5 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          
+      <button rel="stylesheet" class="button"
+        onclick="window.location.href='https://github.com/korobprog/karavan-book-tracker';">
+        <svg width="50px" height="50px" viewBox="0 -0.5 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink">
+
           <title>Github-color</title>
           <desc>Created with Sketch.</desc>
           <defs>
-      
-      </defs>
+
+          </defs>
           <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g id="Color-" transform="translate(-700.000000, -560.000000)" fill="#3E75C3">
-                  <path d="M723.9985,560 C710.746,560 700,570.787092 700,584.096644 C700,594.740671 706.876,603.77183 716.4145,606.958412 C717.6145,607.179786 718.0525,606.435849 718.0525,605.797328 C718.0525,605.225068 718.0315,603.710086 718.0195,601.699648 C711.343,603.155898 709.9345,598.469394 709.9345,598.469394 C708.844,595.686405 707.2705,594.94548 707.2705,594.94548 C705.091,593.450075 707.4355,593.480194 707.4355,593.480194 C709.843,593.650366 711.1105,595.963499 711.1105,595.963499 C713.2525,599.645538 716.728,598.58234 718.096,597.964902 C718.3135,596.407754 718.9345,595.346062 719.62,594.743683 C714.2905,594.135281 708.688,592.069123 708.688,582.836167 C708.688,580.205279 709.6225,578.054788 711.1585,576.369634 C710.911,575.759726 710.0875,573.311058 711.3925,569.993458 C711.3925,569.993458 713.4085,569.345902 717.9925,572.46321 C719.908,571.928599 721.96,571.662047 724.0015,571.651505 C726.04,571.662047 728.0935,571.928599 730.0105,572.46321 C734.5915,569.345902 736.603,569.993458 736.603,569.993458 C737.9125,573.311058 737.089,575.759726 736.8415,576.369634 C738.3805,578.054788 739.309,580.205279 739.309,582.836167 C739.309,592.091712 733.6975,594.129257 728.3515,594.725612 C729.2125,595.469549 729.9805,596.939353 729.9805,599.18773 C729.9805,602.408949 729.9505,605.006706 729.9505,605.797328 C729.9505,606.441873 730.3825,607.191834 731.6005,606.9554 C741.13,603.762794 748,594.737659 748,584.096644 C748,570.787092 737.254,560 723.9985,560" id="Github">
-      
-      </path>
-              </g>
+            <g id="Color-" transform="translate(-700.000000, -560.000000)" fill="#3E75C3">
+              <path
+                d="M723.9985,560 C710.746,560 700,570.787092 700,584.096644 C700,594.740671 706.876,603.77183 716.4145,606.958412 C717.6145,607.179786 718.0525,606.435849 718.0525,605.797328 C718.0525,605.225068 718.0315,603.710086 718.0195,601.699648 C711.343,603.155898 709.9345,598.469394 709.9345,598.469394 C708.844,595.686405 707.2705,594.94548 707.2705,594.94548 C705.091,593.450075 707.4355,593.480194 707.4355,593.480194 C709.843,593.650366 711.1105,595.963499 711.1105,595.963499 C713.2525,599.645538 716.728,598.58234 718.096,597.964902 C718.3135,596.407754 718.9345,595.346062 719.62,594.743683 C714.2905,594.135281 708.688,592.069123 708.688,582.836167 C708.688,580.205279 709.6225,578.054788 711.1585,576.369634 C710.911,575.759726 710.0875,573.311058 711.3925,569.993458 C711.3925,569.993458 713.4085,569.345902 717.9925,572.46321 C719.908,571.928599 721.96,571.662047 724.0015,571.651505 C726.04,571.662047 728.0935,571.928599 730.0105,572.46321 C734.5915,569.345902 736.603,569.993458 736.603,569.993458 C737.9125,573.311058 737.089,575.759726 736.8415,576.369634 C738.3805,578.054788 739.309,580.205279 739.309,582.836167 C739.309,592.091712 733.6975,594.129257 728.3515,594.725612 C729.2125,595.469549 729.9805,596.939353 729.9805,599.18773 C729.9805,602.408949 729.9505,605.006706 729.9505,605.797328 C729.9505,606.441873 730.3825,607.191834 731.6005,606.9554 C741.13,603.762794 748,594.737659 748,584.096644 C748,570.787092 737.254,560 723.9985,560"
+                id="Github">
+
+              </path>
+            </g>
           </g>
-      </svg>
-    </button>
-      </div>
-  
+        </svg>
+      </button>
+    </div>
 
-    </footer>
-    <script>
-      function selectCode(element) {
-        // Создаем объект Range для выделения текста
-        const range = document.createRange();
-        range.selectNodeContents(element);
+  </footer>
+  <script>
+    function selectCode(element) {
+      // Создаем объект Range для выделения текста
+      const range = document.createRange();
+      range.selectNodeContents(element);
 
-        // Очищаем предыдущее выделение и добавляем новое
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
+      // Очищаем предыдущее выделение и добавляем новое
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+
+    document.addEventListener("scroll", () => {
+      const footer = document.getElementById("footer");
+
+      // Check if the user has scrolled to the bottom of the page
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+        footer.style.display = "block"; // Show the footer
+      } else {
+        footer.style.display = "none"; // Hide the footer
       }
-    </script>
-  </body>
+    });
+
+  </script>
+</body>
+
 </html>

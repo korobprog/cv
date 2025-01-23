@@ -17,7 +17,7 @@
     }
 
     header {
-      background: url('https://www.hksols.com/wp-content/uploads/2016/06/HK-Solutions.jpg') no-repeat center/cover;
+      background: url('./HK-Solutions.jpg') no-repeat center/cover;
       color: rgb(255, 255, 255);
       padding: 20px 0;
       text-align: center;
@@ -144,12 +144,39 @@
         font-size: 1em;
       }
     }
+
+    /* Скрываем чекбокс */
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Стиль для текста, на который можно нажать */
+    label {
+      cursor: pointer;
+      font-size: 18px;
+      color: #007BFF;
+      text-decoration: underline;
+    }
+
+    /* Скрытый контент */
+    .content {
+      display: none;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    /* Показываем контент, если чекбокс включен */
+    input[type="checkbox"]:checked~.content {
+      display: block;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="./764228226.jpeg" style="height: 300px; width: auto" />
+    <img src="./frontend_dev_korobkov.jpeg" style="height: 300px; width: auto"
+      alt="Коробков Максим frontend разработчик" />
     <h1>Коробков Максим Викторович</h1>
     <h2>Frontend Developer</h2>
     <div class="flex-container">
@@ -459,6 +486,7 @@
         завершения.
       </p>
     </section>
+
     <section>
       <h2>Опыт работы</h2>
       <ul>

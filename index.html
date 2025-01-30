@@ -170,6 +170,45 @@
     input[type="checkbox"]:checked~.content {
       display: block;
     }
+
+    .table-container {
+      overflow-x: auto;
+      max-width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 300px;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background-color: #6c63ff;
+      color: white;
+    }
+
+    td:nth-child(1),
+    td:nth-child(2),
+    td:nth-child(4) {
+      background-color: #fde8cd;
+    }
+
+    @media (max-width: 400px) {
+
+      th,
+      td {
+        padding: 5px;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 
@@ -571,32 +610,6 @@
         </li>
       </ul>
     </section>
-    <section>
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>TypeScript</span>
-        <span>React</span>
-        <span>CSS</span>
-        <span>HTML5</span>
-        <span>CSS3</span>
-        <span>Redux</span>
-        <span>Frontend</span>
-        <span>Node.js</span>
-        <span>Webpack</span>
-        <span>React.js</span>
-        <span>REST API</span>
-        <span>Sass</span>
-        <span>ReactJS</span>
-        <span>Docker</span>
-        <span>JS</span>
-        <span>API</span>
-        <span>SCSS</span>
-        <span>SPA</span>
-        <span>Express.js</span>
-        <span>Jest</span>
-        <span>NestJS</span>
-      </div>
-    </section>
 
     <section>
       <h2>Опыт работы</h2>
@@ -606,9 +619,19 @@
           настоящее
           время)
           <p>
-            <i>Технологии: es6+, React, Typescript, Antd, Astro, Postman, Docker, Gitlab (+CI/CD), Figma, Firebase
-              (Auth, Data)
-            </i>
+          <div class="skills">
+            <span>ES6+</span>
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Antd</span>
+            <span>Astro</span>
+            <span>Postman</span>
+            <span>Docker</span>
+            <span>Gitlab</span>
+            <span>CI/CD</span>
+            <span>Figma</span>
+            <span>Firebase (Auth, Data)</span>
+          </div>
           </p>
           <p>
             Разработка внутренней CRM системы компании по управлению складами и продажами книг
@@ -616,7 +639,7 @@
           <p>
           <p>Детали проекта:</p>
           <ul>
-            <li>Интересные задачи:
+            <li>Реализовал задачи:
               <ul>
                 <li>Отчеты</li>
                 <li>персональные страницы</li>
@@ -646,7 +669,8 @@
           </p>
           <hr>
           <p>
-            Реализовал функционал интеграции с Яндекс.Картами и базой данных компании для учета местоположений продаж.
+            Реализовал задачи функционал интеграции с Яндекс.Картами и базой данных компании для учета местоположений
+            продаж.
             В рамках задачи разработал систему, позволяющую пользователям добавлять новые локации на глобальной карте
             при продаже продукта. Это решение повысило удобство работы дистрибьюторов и улучшило юзабилити системы.
             После внедрения компания начала автоматически собирать данные о локациях, что оптимизировало внутренние
@@ -661,7 +685,14 @@
           Livboo Corporation (Октябрь 2022 — июль 2023)
 
           <p>
-            <i>Технологии: React (hooks), Redux-toolkit, Typescript, React-Bootstrap, BitBucket, Docker</i>
+          <div class="skills">
+            <span>React (hooks)</span>
+            <span>Redux-toolkit</span>
+            <span>Typescript</span>
+            <span>React-Bootstrap</span>
+            <span>BitBucket</span>
+            <span>Docker</span>
+          </div>
           </p>
           <p>
             Разработка системы учета и контроля тепловой энергии Интересные
@@ -722,7 +753,7 @@
                 </li>
               </ul>
             </li>
-            <li>Интересные задачи:
+            <li>Реализовал задачи:
               <ul>
                 <li>Создание редактора теплосхем:
                   <ul>
@@ -744,9 +775,20 @@
           (Август 2022 - ноябрь 2023)
 
           <p>
-            <i>Технологии: es6+, React, Redux, Typescript, Material-ui,
-              Formik, Chart-js, Storybook, Gitlab (+CI/CD), Figma, Postman.
-            </i>
+          <div class="skills">
+            <span>ES6+</span>
+            <span>React</span>
+            <span>Redux</span>
+            <span>Typescript</span>
+            <span>Material-UI</span>
+            <span>Formik</span>
+            <span>Chart.js</span>
+            <span>Storybook</span>
+            <span>Gitlab</span>
+            <span>CI/CD</span>
+            <span>Figma</span>
+            <span>Postman</span>
+          </div>
           </p>
           <p>Разработка сервиса программ лояльности, с настройками скидок/бонусов, партнеров, турниров за призы,
             дашбордами статистики и прочим. </p>
@@ -797,7 +839,7 @@
                 <li>TypeScript, React, Redux, Material UI, Chart.js, Formik, Yup</li>
               </ul>
             </li>
-            <li>Интересные задачи:
+            <li>Реализовал задачи:
               <ul>
                 <li>Турниры — сложная логика, пользователи могли соревноваться за бонусы и скидки</li>
                 <li>Разработка компонентной системы </li>
@@ -843,7 +885,100 @@
       </ul>
     </section>
 
-
+    <section>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Технологии</th>
+              <th>Опыт работы</th>
+              <th>Уровень</th>
+              <th>Год</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Javascript</td>
+              <td>3</td>
+              <td><b>Advanced</b></td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td>Typescript</td>
+              <td>2</td>
+              <td><b>Intermediate</b></td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>ReactJS</td>
+              <td>3</td>
+              <td><b>Advanced</b></td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td>Redux</td>
+              <td>3</td>
+              <td><b>Advanced</b></td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td>Redux toolkit</td>
+              <td>3</td>
+              <td><b>Advanced</b></td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td>HTML</td>
+              <td>4</td>
+              <td><b>Advanced</b></td>
+              <td>2020</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>4</td>
+              <td><b>Advanced</b></td>
+              <td>2020</td>
+            </tr>
+            <tr>
+              <td>SCSS</td>
+              <td>3</td>
+              <td><b>Advanced</b></td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td>Figma</td>
+              <td>2</td>
+              <td><b>Intermediate</b></td>
+              <td>2022</td>
+            </tr>
+            <tr>
+              <td>Axios</td>
+              <td>3</td>
+              <td><b>Intermediate</b></td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td>REST API</td>
+              <td>3</td>
+              <td><b>Advanced</b></td>
+              <td>2021</td>
+            </tr>
+            <tr>
+              <td>ООП</td>
+              <td>1</td>
+              <td><b>Intermediate</b></td>
+              <td>2023</td>
+            </tr>
+            <tr>
+              <td>GIT</td>
+              <td>3</td>
+              <td><b>Advanced</b></td>
+              <td>2021</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
 
   </div>

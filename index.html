@@ -209,6 +209,20 @@
         font-size: 12px;
       }
     }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #6c63ff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 16px;
+      display: none;
+    }
   </style>
 </head>
 
@@ -1021,6 +1035,7 @@
     </div>
 
   </footer>
+  <button class="scroll-top" id="scrollTop">⬆</button>
   <script>
     function selectCode(element) {
       // Создаем объект Range для выделения текста
@@ -1059,6 +1074,18 @@
       } else {
         alert('К сожалению, ваш браузер не поддерживает функцию "Поделиться".');
       }
+    });
+
+    const scrollTopBtn = document.getElementById("scrollTop");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    });
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
   </script>
